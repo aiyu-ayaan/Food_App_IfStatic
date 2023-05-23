@@ -11,6 +11,8 @@ import com.atech.foodapp.util.DataState;
 
 import java.util.List;
 
+import kotlinx.coroutines.flow.MutableSharedFlow;
+
 public class MainViewModel extends ViewModel {
 
     private final RestaurantRepository restaurantRepository;
@@ -18,6 +20,7 @@ public class MainViewModel extends ViewModel {
     public MainViewModel() {
         restaurantRepository = new RestaurantRepository();
     }
+
 
     public LiveData<DataState<List<RestaurantModel>>> getRestaurants(
             Pair<Double, Double> location

@@ -24,6 +24,7 @@
         tools:ignore="UselessParent">
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:singleLine="true"
@@ -121,6 +122,7 @@
                 android:src="@drawable/baseline_search_24" />
 
             <EditText
+                android:id="@+id/editTextSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -141,8 +143,35 @@
         android:text="@string/nearby_restaurants"
         android:textAppearance="?attr/textAppearanceBodySmall" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_no_food_avilable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_food_available"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
 </LinearLayout>

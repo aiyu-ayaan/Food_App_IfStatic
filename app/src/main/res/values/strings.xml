@@ -12,4 +12,5 @@
     <string name="All">All</string>
     <string name="search">Search For Food</string>
     <string name="nearby_restaurants">Nearby Restaurant</string>
+    <string name="no_food_available">Not Avilable</string>
 </resources>

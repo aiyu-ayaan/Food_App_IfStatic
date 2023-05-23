@@ -26,6 +26,12 @@ public class LocationClient {
         this.activityRef = new WeakReference<>(activity);
     }
 
+    /**
+     * Get instance of LocationClient
+     *
+     * @param activity activity
+     * @return LocationClient
+     */
     public static LocationClient getInstance(Activity activity) {
         if (instance == null) {
             instance = new LocationClient(activity);
@@ -57,7 +63,6 @@ public class LocationClient {
                     List<android.location.Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
                     if (addresses != null && addresses.size() > 0) {
                         Address address = addresses.get(0);
-                        String addressLine = address.getAddressLine(0); // Full address
                         cityName = address.getLocality();
                     }
                 } catch (IOException e) {
