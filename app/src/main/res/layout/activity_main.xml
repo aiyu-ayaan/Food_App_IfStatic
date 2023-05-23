@@ -19,8 +19,17 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/layout_main" />
+            layout="@layout/layout_main"
+            android:visibility="gone"
+            tools:visibility="visible" />
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -28,8 +37,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:theme="@style/MaterialComponents"
+        android:visibility="gone"
         app:fabAlignmentMode="center"
-        app:fabCradleMargin="0dp">
+        app:fabCradleMargin="0dp"
+        tools:visibility="visible">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
@@ -46,10 +57,12 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
         android:contentDescription="@null"
-        app:borderWidth="0dp"
         android:src="@drawable/ic_scan"
-        app:strokeColor="@color/colorPrimary"
         android:theme="@style/MaterialComponents"
         android:tintMode="@color/white"
-        app:layout_anchor="@id/bottomAppBar" />
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:strokeColor="@color/colorPrimary"
+        tools:visibility="visible" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

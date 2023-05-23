@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.atech.foodapp.data.model.RestaurantModel;
+import com.atech.foodapp.data.restaurant.model.RestaurantModel;
 import com.atech.foodapp.databinding.RowResBinding;
 import com.atech.foodapp.util.Utils;
 import com.bumptech.glide.Glide;

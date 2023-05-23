@@ -1,5 +1,10 @@
 package com.atech.foodapp.util;
 
+/**
+ * A generic class that holds a value with its loading status.
+ * @param <T> Type of the resource
+ * @author Aiyu
+ */
 public class DataState <T>{
     private DataState.Status status;
     private T data;

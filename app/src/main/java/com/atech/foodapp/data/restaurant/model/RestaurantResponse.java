@@ -1,4 +1,4 @@
-package com.atech.foodapp.data.model;
+package com.atech.foodapp.data.restaurant.model;
 
 import java.util.List;
 

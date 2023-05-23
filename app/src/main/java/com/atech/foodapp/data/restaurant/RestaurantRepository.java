@@ -1,11 +1,13 @@
-package com.atech.foodapp.data;
+package com.atech.foodapp.data.restaurant;
+
+import android.util.Pair;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.atech.foodapp.data.model.RestaurantModel;
-import com.atech.foodapp.data.model.RestaurantResponse;
+import com.atech.foodapp.data.restaurant.model.RestaurantModel;
+import com.atech.foodapp.data.restaurant.model.RestaurantResponse;
 import com.atech.foodapp.util.DataState;
 
 import java.util.List;
@@ -29,10 +31,12 @@ public class RestaurantRepository {
         restaurantApi = retrofit.create(RestaurantApi.class);
     }
 
-    public LiveData<DataState<List<RestaurantModel>>> getRestaurants() {
+    public LiveData<DataState<List<RestaurantModel>>> getRestaurants(
+            Pair<Double, Double> location
+    ) {
         MutableLiveData<DataState<List<RestaurantModel>>> data = new MutableLiveData<>();
         data.setValue(DataState.loading(null));
-        restaurantApi.getRestaurants(RestaurantApi.defaultLocation.first, RestaurantApi.defaultLocation.second)
+        restaurantApi.getRestaurants(location.first.toString(), location.second.toString())
                 .enqueue(new Callback<>() {
                     @Override
                     public void onResponse(@NonNull Call<RestaurantResponse> call, @NonNull Response<RestaurantResponse> response) {

@@ -1,8 +1,8 @@
-package com.atech.foodapp.data;
+package com.atech.foodapp.data.restaurant;
 
 import android.util.Pair;
 
-import com.atech.foodapp.data.model.RestaurantResponse;
+import com.atech.foodapp.data.restaurant.model.RestaurantResponse;
 
 import retrofit2.Call;
 import retrofit2.http.POST;
