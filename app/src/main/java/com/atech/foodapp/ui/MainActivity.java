@@ -200,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PERMISSION_GRANTED) {
                 Toast.makeText(this, "Granted !!!", Toast.LENGTH_SHORT).show();
+                fetchLocation();
             } else
                 showOpenAppSettingsDialog(this);
         }
