@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Food App</string>
+    <string name="home">Home</string>
+    <string name="videos">Videos</string>
+    <string name="bookmark">BookMark</string>
+    <string name="user">User</string>
+    <string name="blank">" "</string>
+    <string name="pizza">Pizza</string>
+    <string name="chicken">Chiken</string>
+    <string name="salad">Salad</string>
+    <string name="burger">Burger</string>
+    <string name="All">All</string>
+    <string name="search">Search For Food</string>
+    <string name="nearby_restaurants">Nearby Restaurant</string>
 </resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp">
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:drawableStartCompat="@drawable/baseline_location_on_24"
+        tools:text="Location" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.Material3.Chip.Input.Icon.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/All"
+                android:textColor="@color/chip_text_color"
+                app:checkedIcon="@null"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipCornerRadius="40dp"
+                app:closeIcon="@null" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPizza"
+                style="@style/Widget.Material3.Chip.Input.Icon.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza"
+                android:textColor="@color/chip_text_color"
+                app:checkedIcon="@null"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipCornerRadius="40dp"
+                app:chipIcon="@drawable/pizza"
+                app:closeIcon="@null" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipChicken"
+                style="@style/Widget.Material3.Chip.Input.Icon.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chicken"
+                android:textColor="@color/chip_text_color"
+                app:checkedIcon="@null"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipCornerRadius="40dp"
+                app:chipIcon="@drawable/roastedchicken"
+                app:closeIcon="@null" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSalad"
+                style="@style/Widget.Material3.Chip.Input.Icon.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salad"
+                android:textColor="@color/chip_text_color"
+                app:checkedIcon="@null"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipCornerRadius="40dp"
+                app:chipIcon="@drawable/salad"
+                app:closeIcon="@null" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBurger"
+                style="@style/Widget.Material3.Chip.Input.Icon.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/burger"
+                android:textColor="@color/chip_text_color"
+                app:checkedIcon="@null"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipCornerRadius="40dp"
+                app:chipIcon="@drawable/burger"
+                app:closeIcon="@null" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/materialCardViewElevatedStyle"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/baseline_search_24" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="@string/search"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/nearby_restaurants"
+        android:textAppearance="?attr/textAppearanceBodySmall" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
